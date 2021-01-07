@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Friendship features', type: :request do
   before :each do
-    user1 = User.create(name: 'Tadeu', email: 'tadeu@tadeu.com', password: '123123')
-    user2 = User.create(name: 'Maria', email: 'maria@maria.com', password: '123123')
+    User.create(name: 'Tadeu', email: 'tadeu@tadeu.com', password: '123123')
+    User.create(name: 'Maria', email: 'maria@maria.com', password: '123123')
   end
 
   scenario 'Create and accept new friendship' do
