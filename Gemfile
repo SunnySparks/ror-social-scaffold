@@ -9,6 +9,7 @@ gem 'rails', '~> 5.2.4'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -37,7 +38,8 @@ gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'rubocop'
+# gem 'rubocop'
+gem 'rubocop', '~> 1.8', '>= 1.8.1'
 
 gem 'devise'
 
