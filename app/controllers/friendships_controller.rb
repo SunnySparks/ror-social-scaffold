@@ -43,6 +43,7 @@ class FriendshipsController < ApplicationController
   end
 
   def inverse_params(first)
-    Friendship.new(user_id: first.friend_id, friend_id: first.user_id, confirmed: true)
+    second = Friendship.new(user_id: first.friend_id, friend_id: first.user_id, confirmed: true)
+    second
   end
 end
