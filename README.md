@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-TBA
+[Live Demo](https://floating-tundra-81688.herokuapp.com/)
 
 
 ## Getting Started
@@ -62,16 +62,29 @@ Open `http://localhost:3000/` in your browser.
 ```
     rpsec --format documentation
 ```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
+```
+     bundle exec rspec
+```
+   
+Unit and Integration Test has been implemented using RSpec and Capybara.
 
 ### Deployment
 
-TBA
+Deployed on Heroku through the [link](https://floating-tundra-81688.herokuapp.com/)
 
 ## Authors
 
-TBA
+👤 **karthick harimoorthy**
+
+- Github: [@karthykarthick](https://github.com/karthykarthick)
+
+- Linkedin: [karthick-harimoorthy](https://www.linkedin.com/in/karthick-harimoorthy/)
+
+👤 **Rocio Martinez**
+
+- Github: [@Rocio01](https://github.com/Rocio01)
+- Twitter: [@rugiada8801](https://twitter.com/rugiada8801)
+- Linkedin: [zulma-rocio-martinez](https://www.linkedin.com/in/zulma-rocio-martinez)
 
 ## 🤝 Contributing
 
@@ -85,9 +98,14 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+-Microverse
+-GitHub
+-TheOdinProject
+
 
 ## 📝 License
 
-TBA
+-This project is MIT licensed.
+
+
 
