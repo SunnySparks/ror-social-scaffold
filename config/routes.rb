@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'posts#index'
 
   devise_for :users
+  devise_for :friendships
 
   resources :users, only: [:index, :show]
   resources :posts, only: [:index, :create] do
@@ -11,6 +12,6 @@ Rails.application.routes.draw do
   end
   
   resources :friendships, only: [:index, :create, :update, :destroy]
+  get 'accept/:id', to: 'friendships#accept', as: :accept
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
