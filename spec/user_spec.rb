@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
       expect(user).to be_valid
     end
 
-    it "user should be invalid if name is empty" do
+    it 'user should be invalid if name is empty' do
       user.name = ''
       expect(user).not_to be_valid
     end

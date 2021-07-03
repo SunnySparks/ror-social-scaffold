@@ -56,6 +56,8 @@ Lint/StructNewOverride:
   Enabled: false
 Lint/Void:
   Enabled: false
+Style/BlockComments:
+  Enabled: false
 Style/HashEachMethods:
   Enabled: false
 Style/HashTransformKeys:
