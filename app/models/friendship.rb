@@ -4,6 +4,6 @@ class Friendship < ApplicationRecord
   private
 
   def create_friend
-    Friendship.create(user_id: friend_id, friend_id: user_id, status: true )
+    Friendship.create(user_id: friend_id, friend_id: user_id, status: true)
   end
 end

@@ -1,6 +1,6 @@
 class FriendshipsController < ApplicationController
   def index
-    @user = User.find_by(params[:user_id]) 
+    @user = User.find_by(params[:user_id])
     @friendships = @user.friendships
   end
 
@@ -11,7 +11,7 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @user = User.find_by(params[:user_id]) 
+    @user = User.find_by(params[:user_id])
     @friendship = @user.friendships.find params[:id]
     @friendship.decline
   end
@@ -21,7 +21,7 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(params[:user_id]) 
+    @user = User.find_by(params[:user_id])
     @friendship = Friendship.new(user_id: current_user.id, friend_id: params[:user_id], confirmed: false)
     @friendship.save!
     if @friendship.save
@@ -41,6 +41,4 @@ class FriendshipsController < ApplicationController
       redirect_to root_path, alert: 'Request Already sent'
     end
   end
-
-
 end
