@@ -1,7 +1,8 @@
 AllCops:
+  NewCops: enable
   Exclude:
     - "db/**/*"
-    - "bin/*"
+    - "bin/*" 
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
@@ -24,7 +25,7 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  ExcludedMethods: ["describe"]
+  IgnoredMethods: ['describe']
   Max: 30
 
 Style/Documentation:
@@ -49,7 +50,13 @@ Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 Lint/RaiseException:
   Enabled: false
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
 Lint/StructNewOverride:
+  Enabled: false
+Lint/Void:
+  Enabled: false
+Style/BlockComments:
   Enabled: false
 Style/HashEachMethods:
   Enabled: false
