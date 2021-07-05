@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :friends, through: :friendships, source: :friend
 
+  scope :all_except, ->(user) { where.not(id: user) }
+  
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }
     friends_array + inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }
