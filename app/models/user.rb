@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :friendships
-  has_many :friends, through: :friendships, source: :friend
+  
 
   scope :all_except, ->(user) { where.not(id: user) }
   
