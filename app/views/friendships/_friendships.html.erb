@@ -3,10 +3,9 @@
   <tr>
   <%= friendship %>
   </tr>
+  <small>
+    <%= link_to 'Accept friend', friendships_path(friendships), method: 'put', class: 'btn-success p-1 rounded no-link' %>
+    <%= link_to 'Reject request', friendships_path(friendships), method: 'delete', class: 'btn-danger p-1 rounded no-link' %>
+  </small>
 <% end %>
-
-<small>
-  <%= link_to 'Accept friend', friendships_path(friendships), method: 'put', class: 'btn-success p-1 rounded no-link' %>
-  <%= link_to 'Reject request', friendships_path(friendships), method: 'delete', class: 'btn-danger p-1 rounded no-link' %>
-</small>
 </div>
