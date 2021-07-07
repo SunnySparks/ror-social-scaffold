@@ -1,7 +1,8 @@
 class FriendshipsController < ApplicationController
   def index
-    @user = User.find_by(params[:user_id])
+    @user = User.find_by(params[current_user.id])
     @friendships = @user.friendships
+    @users = User.all
   end
 
   def update
@@ -22,7 +23,7 @@ class FriendshipsController < ApplicationController
 
   def create
     @user = User.find_by(params[:user_id])
-    @friendship = Friendship.new(user_id: current_user.id, friend_id: params[:user_id], confirmed: false)
+    @friendship = Friendship.new(user_id: current_user.id, friend_id: @user.id, confirmed: false)
     @friendship.save!
     if @friendship.save
       redirect_to root_path, notice: 'Friend Request Sent'
@@ -33,7 +34,7 @@ class FriendshipsController < ApplicationController
 
   def accept
     @friendship = Friendship.find_by(user_id: params[:id], friend_id: current_user.id)
-    @friendship.status = 'accepted'
+    @friendship.confirmed = true
 
     if @friendship.save
       redirect_to root_path, notice: 'Friend Request Sent'

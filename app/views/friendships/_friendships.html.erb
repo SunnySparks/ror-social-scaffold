@@ -1,7 +1,11 @@
 <div class="border p-3 mb-3 rounded">
 <% friendships.each do |friendship| %>
   <tr>
-  <%= friendship %>
+  <% @users.each do |user| %>
+      <% if friendship.user_id == user.id %>
+        <%= user.name %>
+      <% end %>
+  <% end %>
   </tr>
   <small>
     <%= link_to 'Accept friend', friendships_path(friendships), method: 'put', class: 'btn-success p-1 rounded no-link' %>
