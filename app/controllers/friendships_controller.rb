@@ -2,7 +2,6 @@ class FriendshipsController < ApplicationController
   def index
     @user = User.find_by(params[current_user.id])
     @friendships = @user.friendships
-    #@users = User.all
   end
 
   def update
@@ -33,7 +32,7 @@ class FriendshipsController < ApplicationController
   end
 
   def accept
-    @friendship = Friendship.find_by(user_id: current_user.id, friend_id: params[:friend_id])
+    @friendship = Friendship.find_by(user_id: params[:friend_id], friend_id: current_user.id)
     @friendship.confirmed = true
 
     if @friendship.save
