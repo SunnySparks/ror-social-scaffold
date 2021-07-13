@@ -1,6 +1,7 @@
 class Friendship < ApplicationRecord
   belongs_to :user
-  belongs_to :friend, class_name: "User", optional: true
+  belongs_to :friend, class_name: 'User', optional: true
+
   private
 
   def create_friend
