@@ -9,9 +9,17 @@ class User < ApplicationRecord
   has_many :posts
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
+<<<<<<< HEAD
   has_many :friendships, dependent: :destroy
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
 
+=======
+  has_many :friendships
+  
+
+  scope :all_except, ->(user) { where.not(id: user) }
+  
+>>>>>>> parent of 4a03d6b (Create reverse friendships and display friend requests)
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }
     friends_array + inverse_friendships.map { |friendship| friendship.user if friendship.confirmed }
@@ -30,5 +38,9 @@ class User < ApplicationRecord
     friendship = inverse_friendships.find { |friendship| friendship.user == user }
     friendship.confirmed = true
     friendship.save
+  end
+
+  def friend?(user)
+    friends.include?(user)
   end
 end
