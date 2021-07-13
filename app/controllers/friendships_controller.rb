@@ -1,12 +1,7 @@
 class FriendshipsController < ApplicationController
   def index
     @user = User.find_by(params[current_user.id])
-<<<<<<< HEAD
     @friendships = Friendship.includes(:user, :friend)
-=======
-    @friendships = @user.friendships
-    @users = User.all
->>>>>>> parent of 4a03d6b (Create reverse friendships and display friend requests)
   end
 
   def update
@@ -37,11 +32,7 @@ class FriendshipsController < ApplicationController
   end
 
   def accept
-<<<<<<< HEAD
     @friendship = Friendship.find_by(user_id: user_id, friend_id: friend_id, confirmed: false)
-=======
-    @friendship = Friendship.find_by(user_id: params[:id], friend_id: current_user.id)
->>>>>>> parent of 4a03d6b (Create reverse friendships and display friend requests)
     @friendship.confirmed = true
 
     if @friendship.save
