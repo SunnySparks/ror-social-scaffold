@@ -2,7 +2,8 @@
 <% friendships.each do |friendship| %>
   <tr>
 
-  <%= friendship.user.name %>
+  <%= friendship.friend.name %>
+  <%= friendship.friend.id %>
 
   </tr>
   <small>
@@ -10,4 +11,6 @@
     <%= link_to 'Reject request', friendships_path(friendships), method: 'delete', class: 'btn-danger p-1 rounded no-link' %></br>
   </small>
 <% end %>
+
+
 </div>

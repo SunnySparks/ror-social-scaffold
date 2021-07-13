@@ -13,5 +13,4 @@ Rails.application.routes.draw do
   resources :friendships, only: [:index, :create, :update, :destroy, :put]
   get 'accept/:id', to: 'friendships#accept', as: :accept
 
-  #Need to make Routes for friendships put
 end
