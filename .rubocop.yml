@@ -50,7 +50,13 @@ Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 Lint/RaiseException:
   Enabled: false
+Lint/ShadowingOuterLocalVariable:
+  Enabled: false
 Lint/StructNewOverride:
+  Enabled: false
+Lint/Void:
+  Enabled: false
+Style/BlockComments:
   Enabled: false
 Style/HashEachMethods:
   Enabled: false
