@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-TBA
+https://stay-in-touch-rails.herokuapp.com/users/sign_in
 
 
 ## Getting Started
