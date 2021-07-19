@@ -80,7 +80,7 @@ TBA
 
 👤 **José Francisco Silva Díaz**
 
-- GitHub: [@SunnySpark](https://github.com/SunnySparks)
+- GitHub: [@SunnySparks](https://github.com/SunnySparks)
 - Twitter: [@JosfranT6](https://twitter.com/JosFranT6)
 
 ## 🤝 Contributing
